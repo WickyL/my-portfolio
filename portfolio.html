@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cestovní kancelář</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #562ba5;
+            color: #fff;
+            padding: 10px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .image {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .details {
+            display: none;
+            position: absolute;
+            left: 220px;
+            top: 0;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hlavička -->
+    <header>
+        <h1>Cestovní kancelář</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Indie</a></li>
+                <li><a href="#">USA</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main page -->
+    <main>
+        <h2>O nás</h2>
+        <p>Nabízíme skvělé zážitky</p>
+        <div class="container">
+            <img src="new-york-2-1200x800.avif" alt="New York" class="image" id="image">
+            <div class="details" id="details">
+                <p><strong>Název:</strong>Socha svobody</p>
+                <p><strong>Materiál:</strong>měď, ocel</p>
+                <p><strong>Popis:</strong>Výhled na New York</p>
+            </div>
+        </div>
+    </main>
+    <!-- Patička -->
+    <footer>
+        <p>&copy; 2025 Viktorie Linhartová</p>
+    </footer>
+
+    <script>
+        const image = document.getElementById("image");
+        const details = document.getElementById("details");
+
+        image.addEventListener("mouseenter", () => { //lambda funkce
+            details.style.display = "block";
+        });
+
+        image.addEventListener("mouseleave", () => { //lambda funkce
+            details.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>
